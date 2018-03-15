@@ -6,11 +6,6 @@ import TableData from './TableData';
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-
-  }
-
   render() {
     return (
       <div className="container">

@@ -8,7 +8,7 @@ import axios from 'axios';
 
 class TableData extends Component {
 
-  imageFormatter(cell, row){
+  imageFormatter = (cell, row) => {
     return (<img style={{width:50}} src={cell}/>)
   }
 
@@ -16,7 +16,6 @@ class TableData extends Component {
     axios.get(`https://fcctop100.herokuapp.com/api/fccusers/top/recent`)
     .then(resp => {
       const campers = resp.data;
-      console.log(campers);
       this.setState({ campers});
     });
   }
@@ -25,7 +24,6 @@ class TableData extends Component {
     axios.get(`https://fcctop100.herokuapp.com/api/fccusers/top/alltime`)
     .then(resp => {
       const campers = resp.data;
-      console.log(campers);
       this.setState({ campers});
     });
   }
@@ -67,7 +65,6 @@ class TableData extends Component {
     axios.get(`https://fcctop100.herokuapp.com/api/fccusers/top/recent`)
     .then(resp => {
       const campers = resp.data;
-      console.log(campers);
       this.setState({ campers});
     });
   }
